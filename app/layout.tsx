@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next"; // 🎯 Viewport ကိုပါ တွဲယူပါသည်
+import type { Metadata, Viewport } from "next"; 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
@@ -6,6 +6,7 @@ import "primereact/resources/themes/lara-light-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import Footer from "./components/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,12 +35,12 @@ export const metadata: Metadata = {
   authors: [{ name: "Your Company Name", url: "https://yourwebsite.com" }],
   creator: "Your Company Name",
   publisher: "Your Company Name",
-  metadataBase: new URL("https://yourwebsite.com"),
+  metadataBase: new URL("https://ecommence-navy.vercel.app/"),
   
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yourwebsite.com",
+    url: "https://ecommence-navy.vercel.app/",
     title: "Premium E-Commerce Store | Buy the Best Products",
     description: "Discover premium quality products at the best prices. Fast shipping and secure checkout.",
     siteName: "Premium E-Commerce Store",
@@ -93,6 +94,7 @@ export default function RootLayout({
         </main>
 
         <Footer />
+        <Analytics/>
       </body>
     </html>
   );
