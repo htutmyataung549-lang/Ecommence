@@ -90,7 +90,7 @@ Bash
 # Restart the container quickly
 docker restart nextjs-ecommerce-app
 
-# Start Run the container
+# Start Run the container quickly
 sudo docker run -p 3000:3000 --name my-ecommerce-app ecommerce-frontend
 
 # Stop the running container
